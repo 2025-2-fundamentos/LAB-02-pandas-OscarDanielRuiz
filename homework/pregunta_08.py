@@ -21,4 +21,14 @@ def pregunta_08():
     38   38   E    1  1999-09-28    39
     39   39   E    5  1998-01-26    44
 
-    """
+     """
+
+    import pandas as pd
+
+    tbl0 = pd.read_csv("files/input/tbl0.tsv", sep="\t")
+    tbl0["suma"] = tbl0["c0"] + tbl0["c2"]
+    return tbl0
+
+
+if __name__ == "__main__":
+    print(pregunta_08())
